@@ -1,4 +1,9 @@
-<!doctype html>
+# Create a self-contained single-file HTML app that runs without Node/Vite.
+# It imports React 18, ReactDOM 18, and lucide-react via ESM CDN (esm.sh),
+# and Tailwind via the official CDN. The whole AttendanceSystem component
+# is embedded and mounted. This works on GitHub Pages and by double-clicking
+# locally (note: geolocation requires HTTPS, so it will work on GitHub Pages).
+html = r"""<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -633,3 +638,6 @@
     </script>
 </body>
 </html>
+"""
+open("/mnt/data/attendx.html", "w", encoding="utf-8").write(html)
+"/mnt/data/attendx.html"
